@@ -4,8 +4,8 @@ public class _23_LongestOddEvenSequence {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        String replace = input.replaceAll("\\s+", "");
-        String[] arr = replace.substring(1, replace.length() - 1).split("\\)\\(");
+        String replace = input.replaceAll("[\\s()]+", " ");
+        String[] arr = replace.trim().split("\\s+");
 
         int sequence = 0;
         int total = 0;
